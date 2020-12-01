@@ -1,0 +1,7 @@
+E:\PG-DAC\.Net Module\Code Practice\Prac2\Prac2\bin\Debug\Prac2.exe.config
+E:\PG-DAC\.Net Module\Code Practice\Prac2\Prac2\bin\Debug\Prac2.exe
+E:\PG-DAC\.Net Module\Code Practice\Prac2\Prac2\bin\Debug\Prac2.pdb
+E:\PG-DAC\.Net Module\Code Practice\Prac2\Prac2\obj\Debug\Prac2.csprojAssemblyReference.cache
+E:\PG-DAC\.Net Module\Code Practice\Prac2\Prac2\obj\Debug\Prac2.csproj.CoreCompileInputs.cache
+E:\PG-DAC\.Net Module\Code Practice\Prac2\Prac2\obj\Debug\Prac2.exe
+E:\PG-DAC\.Net Module\Code Practice\Prac2\Prac2\obj\Debug\Prac2.pdb
