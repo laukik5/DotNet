@@ -1,0 +1,107 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Prac2
+{
+    class Program
+    {
+        static void Main()
+        {
+            Employee o1 = new Employee("Buddy",123456,10);
+            Employee o2 = new Employee("Aadi",654321);
+            Employee o3 = new Employee("Gundaa");
+            Employee o4 = new Employee();
+            Console.WriteLine(o1.EMPNO);
+            Console.WriteLine(o2.EMPNO);
+            Console.WriteLine(o3.EMPNO);
+
+            Console.WriteLine(o3.EMPNO);
+            Console.WriteLine(o2.EMPNO);
+            Console.WriteLine(o1.EMPNO);
+        }
+    }
+    class Employee
+    {
+        
+        private string Name;
+        public string NAME
+        {
+            get
+            {return Name;}
+            set
+            { if (value==null)
+              Console.WriteLine("Name Field Can't be Empty");
+              else
+              Name= value;
+            }
+        }
+        private static int EmpNoCount=0;
+        private int EmpNo;
+        public int EMPNO
+        {
+            get { return EmpNo; } 
+        }
+
+        private decimal Basic;
+        public decimal BASIC
+        {
+            get
+            {return Basic;}
+            set
+            { if (10000 <= value && value >= 100000)
+              Basic = value;
+              else
+              Console.WriteLine("Invalid Basic");
+            }
+        }
+        private short DeptNo;
+ 
+        public short DEPTNO
+        {
+            get
+            { return DeptNo;}
+            set
+            {
+                if (value > 0)
+                    DeptNo = value;
+                else
+                 Console.WriteLine("Invalid DeptNo");   
+            }
+        }
+
+
+        public Employee(string Name="no-Name",decimal Basic=10000,short DeptNo=10)
+        {
+            EmpNoCount++;
+            EmpNo = EmpNoCount;
+            this.Name = Name;
+            this.Basic = Basic;
+            this.DeptNo = DeptNo;
+        }
+        //public Employee(string Name, decimal Basic)
+        //{
+        //    EmpNoCount++;
+        //    EmpNo = EmpNoCount;
+        //    this.Name = Name;
+        //    this.Basic = Basic;
+        //}
+        //public Employee(string Name)
+        //{
+        //    EmpNoCount++;
+        //    EmpNo = EmpNoCount;
+        //    this.Name = Name;
+        //}
+        //public Employee()
+        //{
+           
+        //}
+        public decimal GetNetSalary()
+        {
+            return Basic*12;        
+        }
+    }
+
+}
