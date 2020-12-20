@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="laukik" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MsSqlLocalDb;Initial Catalog=laukik;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="laukikConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.city" Member="cities">
+    <Type Name="city">
+      <Column Name="cityId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cityName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="city_User" Member="Users" ThisKey="cityId" OtherKey="cityid" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="emailId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="phoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="city_User" Member="city" ThisKey="cityid" OtherKey="cityId" Type="city" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

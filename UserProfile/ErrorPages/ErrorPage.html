@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login Successful</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container" style="height: 100vh">
+        <div class="row justify-content-center align-items-center" style="height: 100vh">
+            <spr:form commandName="user" method="GET">
+
+                <div class="alert alert-Danger" role="alert">
+                    <h4 class="alert-heading">Error </h4>
+                    <p>Error 404</p>
+                    <hr>
+                    <p class="mb-0">Sorry For Inconvinience.</p>
+                </div>
+            </spr:form>
+        </div>
+    </div>
+    <script type="text/javascript">
+    window.onload = function () {
+        setTimeout(test, 3000);
+    };
+
+    var test = function () {
+        window.location.href = '@Url.Action("Homepage", "Home")/'        ;
+    }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+﻿@model UserProfile.Models.Users
+
+@{
+    ViewBag.Title = "SuccessMsg";
+    string msg = ViewBag.msg;
+    string contr = ViewBag.contr;
+}
+@section metatags
+{
+    <meta http - equiv="refresh" content="3; url =  " />
+}
+
+
+<div class="container" style="height: 100vh">
+    <div class="row justify-content-center align-items-center" style="height: 100vh">
+        <form method="GET">
+
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Success </h4>
+                <p>@msg @Html.DisplayTextFor(model => model.fullName)!!</p>
+                <hr>
+                <p class="mb-0">The Secret to getting Done is Getting Started.</p>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        setTimeout(test, 3000);
+    };
+
+    var test = function () {
+        window.location.href = '@Url.Action("Homepage", "Home")/'        ;
+    }
+</script>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

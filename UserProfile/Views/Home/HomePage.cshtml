@@ -1,0 +1,32 @@
+﻿@model UserProfile.Models.Users
+
+@{
+    ViewBag.Title = "HomePage";
+}
+
+<h2>HomePage</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            Welcome  @Html.DisplayFor(model => model.userName)
+        </dd>
+
+        <dd>
+            Full Name :  @Html.DisplayFor(model => model.fullName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    /    @Html.ActionLink("Edit Profile", "Edit", new { id = Model.userId }) |
+    @Html.ActionLink("Log Out", "LogOut") |
+    @Html.ActionLink("Show Profile", "Details", new { id = Model.userId })
+</p>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

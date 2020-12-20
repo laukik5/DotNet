@@ -1,0 +1,30 @@
+﻿@model UserProfile.Models.Users
+@{
+    ViewBag.Title = "ErrorView";
+
+    
+    string msg = ViewBag.msg;
+    string contr = ViewBag.cntr;
+    
+}
+
+   
+<div class="container" style="height: 100vh">
+    <div class="row justify-content-center align-items-center" style="height: 100vh">
+        <form action="@contr" >
+
+            <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Failed </h4>
+                <p>@msg</p>
+                <hr>
+                <p class="mb-0">@msg</p>
+            </div>
+            <input type="submit" value="Back To Home" class="btn btn-primary"  >
+        </form>
+    </div>
+</div>
+ 
+
+
+
+
